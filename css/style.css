@@ -1,5 +1,5 @@
 /* Common styles */
-/* line 21, ../sass/style.scss */
+/* line 24, ../sass/style.scss */
 body {
   min-width: 960px;
   font-family: "Roboto-Bold", Arial, sans-serif;
@@ -8,18 +8,19 @@ body {
   margin: 0;
 }
 
-/* line 28, ../sass/style.scss */
+/* line 31, ../sass/style.scss */
 .main-header {
   max-width: 1920px;
 }
-/* line 31, ../sass/style.scss */
-.main-header .container {
+
+/* line 34, ../sass/style.scss */
+.container {
   margin: 0 auto;
   padding: 0 10px;
   width: 940px;
 }
 
-/* line 37, ../sass/style.scss */
+/* line 39, ../sass/style.scss */
 .clearfix {
   content: "";
   display: table;
@@ -31,32 +32,100 @@ body {
 Header 
 *
 */
-/* line 49, ../sass/style.scss */
-.main-header-navigation {
+/* line 51, ../sass/style.scss */
+.main-header {
   background-color: #e1e1e1;
-  width: 960px;
 }
-/* line 54, ../sass/style.scss */
-.main-header-navigation h1 {
+/* line 55, ../sass/style.scss */
+.main-header .main-header-navigation {
+  width: 940px;
+}
+/* line 59, ../sass/style.scss */
+.main-header h1 {
   width: 220px;
-  display: inline-block;
-  margin-right: 40px;
+  display: block;
+  float: left;
+  margin: 20px 40px 20px 10px;
   font-size: 32px;
-  color: black;
+  color: #000;
 }
-/* line 62, ../sass/style.scss */
-.main-header-navigation ul {
+/* line 68, ../sass/style.scss */
+.main-header ul {
   display: block;
   float: right;
-  max-width: 700px;
-  margin: 0;
+  max-width: 690px;
+  margin: 30px 0 0 0;
   padding: 0;
   font-size: 0;
   list-style: none;
 }
-/* line 72, ../sass/style.scss */
-.main-header-navigation li {
+/* line 78, ../sass/style.scss */
+.main-header li {
   display: inline-block;
+  vertical-align: top;
+  margin-right: 30px;
   font-size: 14px;
-  margin-left: 30px;
+}
+/* line 84, ../sass/style.scss */
+.main-header li:last-child {
+  margin-right: 0;
+}
+
+/* line 89, ../sass/style.scss */
+.main-content {
+  background-color: #6DDDD9;
+  font-size: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+/* line 95, ../sass/style.scss */
+.main-content .portfolio-content {
+  margin-bottom: 40px;
+}
+/* line 106, ../sass/style.scss */
+.main-content .box {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 46px;
+  vertical-align: top;
+  background-color: #fff;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 119, ../sass/style.scss */
+.main-content .box:nth-child(4n) {
+  margin-right: 0px;
+}
+/* line 123, ../sass/style.scss */
+.main-content .feedback {
+  float: left;
+  background-color: #1E8884;
+}
+/* line 126, ../sass/style.scss */
+.main-content .feedback h2 {
+  display: block;
+  width: 300px;
+  float: left;
+  margin-top: 0;
+  font-size: 24px;
+  color: #fff;
+}
+/* line 134, ../sass/style.scss */
+.main-content .feedback p {
+  display: block;
+  width: 400px;
+  float: left;
+  font-size: 14px;
+  color: #fff;
+}
+/* line 141, ../sass/style.scss */
+.main-content .feedback img {
+  float: right;
 }

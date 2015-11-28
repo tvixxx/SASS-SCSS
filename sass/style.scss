@@ -1,17 +1,20 @@
 // Color
 $color: #971717;
 $header_bg: #e1e1e1;
+$container_bg: #6DDDD9;
+$feedback_bg: #1E8884;
 
 // Font-size & Font-Family
 $base_font_page: 14px;
 $header_1: 32px;
+$header_2: 24px;
 
 
 // Width
 $max_width: 1920px;
 $min_width: 960px;
 $container_width: 960px;
-
+$h_header_width: 220px;
 
 
 
@@ -27,13 +30,12 @@ body {
 }
 .main-header {
 	max-width: $max_width;
-
-	.container {
-			margin: 0 auto;
-			padding: 0 10px;
-			width: $container_width - (10px * 2);
-	}
 }
+.container {
+	margin: 0 auto;
+	padding: 0 10px;
+	width: $container_width - (10px * 2);
+	}
 .clearfix {
 	content: "";
 	display: table;
@@ -46,24 +48,28 @@ body {
 Header 
 *
 */
-.main-header-navigation {
-		background-color: $header_bg;
-		width: $container_width;
-
+.main-header {
+	background-color: $header_bg;
+	
+	//navigation
+	.main-header-navigation {
+		width: $container_width - 20px;
+	}
 		//h1
 		h1 {
-			width: 220px;
-			display: inline-block;
-			margin-right: 40px;
+			width: $h_header_width;
+			display: block;
+			float: left;
+			margin: 20px 40px 20px 10px;
 			font-size: $header_1;
-			color: black;
+			color: #000;
 		}
 			//ul 
 			ul {
 				display: block;
 				float: right;
-				max-width: $container_width - 220px - 40px;
-				margin: 0;
+				max-width: $container_width - $h_header_width - 50px;
+				margin: 30px 0 0 0;
 				padding: 0;
 				font-size: 0;
 				list-style: none;
@@ -71,10 +77,73 @@ Header
 				//li
 				li {
 					display: inline-block;
+					vertical-align: top;
+					margin-right: 30px;
 					font-size: $base_font_page;
-					margin-left: 30px;
+
+					&:last-child {
+						margin-right: 0;
+					}
 				}
 }
+.main-content {
+	background-color: $container_bg;
+	font-size: 0;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	
+	.portfolio-content {
+		margin-bottom: 40px;
+	}
+	//mixin
+	@mixin border-radius($box_border_radius) {
+		-webkit-border-radius: $box_border_radius;
+		-moz-border-radius: $box_border_radius;
+		-ms-border-radius: $box_border_radius;
+		-o-border-radius: $box_border_radius;
+		border-radius: $box_border_radius;
+	}
+		.box {
+			position: relative;
+			display: inline-block;
+			width: 200px;
+			height: 200px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			margin-right: 46px;
+			vertical-align: top;
+			background-color: #fff;
+			@include border-radius(5px);
+			
+			// select last-child in row
+			&:nth-child(4n) {
+				margin-right: 0px;
+			}
+		}
+	.feedback {
+		float: left;
+		background-color: $feedback_bg;
+			h2 {
+				display: block;
+				width: $h_header_width + 80px;
+				float: left;
+				margin-top: 0;
+				font-size: $header_2;
+				color: #fff;
+			}
+				p {	
+					display: block;
+					width: 400px;
+					float: left;
+					font-size: $base_font_page;
+					color: #fff;
+				}
+					img {
+						float: right;
+					}
+	}	
+}
+
 	
 
 
