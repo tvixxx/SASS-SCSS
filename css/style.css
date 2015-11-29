@@ -82,7 +82,7 @@ Header
 .main-content .portfolio-content {
   margin-bottom: 40px;
 }
-/* line 106, ../sass/style.scss */
+/* line 107, ../sass/style.scss */
 .main-content .box {
   position: relative;
   display: inline-block;
@@ -98,17 +98,52 @@ Header
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-/* line 119, ../sass/style.scss */
+/* line 124, ../sass/style.scss */
+.main-content .box:after {
+  content: "";
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+/* line 139, ../sass/style.scss */
+.main-content .box:hover {
+  -webkit-transform: scale(1.25, 1.25);
+  transform: scale(1.25, 1.25);
+}
+/* line 145, ../sass/style.scss */
+.main-content .box:hover:after {
+  opacity: 1;
+}
+/* line 150, ../sass/style.scss */
 .main-content .box:nth-child(4n) {
   margin-right: 0px;
 }
-/* line 123, ../sass/style.scss */
+/* line 155, ../sass/style.scss */
 .main-content .feedback {
   float: left;
   background-color: #1E8884;
 }
-/* line 126, ../sass/style.scss */
+/* line 158, ../sass/style.scss */
 .main-content .feedback h2 {
   display: block;
   width: 300px;
@@ -117,7 +152,7 @@ Header
   font-size: 24px;
   color: #fff;
 }
-/* line 134, ../sass/style.scss */
+/* line 166, ../sass/style.scss */
 .main-content .feedback p {
   display: block;
   width: 400px;
@@ -125,7 +160,7 @@ Header
   font-size: 14px;
   color: #fff;
 }
-/* line 141, ../sass/style.scss */
+/* line 173, ../sass/style.scss */
 .main-content .feedback img {
   float: right;
 }
