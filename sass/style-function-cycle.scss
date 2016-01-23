@@ -1,0 +1,21 @@
+/* Function + cycle - Columns */
+@function column-width($number) {
+	@return 100% / 12 * $number;
+}
+
+@for $i from 1 to 12 {
+	.col-#{$i} {
+		width: column-width($i);
+	}
+}
+
+/* Mixin color - condition */
+ @mixin color($status) {
+	@if ($status == error) {
+		color: red;
+	} @else if ($status == ok) {
+		color: green;
+	} @else {
+		color: black;
+	}
+ }
